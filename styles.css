@@ -1,0 +1,176 @@
+/*NOTE: The only thing I took are how the page looks and its colors, how I actually implemented them is based on how I think the code works. I'm a bit short on time, not to mention I'm a terrible designer, so this is my way of finishing it but learning at the same time. If its similar to the original code, welp gg */
+
+:root {
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+html, body {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: var(--main-red);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#note {
+    color: black;
+}
+#navbar {
+    margin-right: 15px;
+}
+#navbar a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 19px 5px;
+}
+
+#navbar a:hover {
+    background-color: var(--main-gray);
+}
+
+main {
+    margin-top: 60px;
+}
+
+.flex-column-align-center {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+.flex-row-align-center {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+}
+
+
+.large-header {
+    font-size: 40px;
+}
+.sub-header {
+    color: grey;
+    margin-top: -15px;
+    font-style:italic;
+}
+
+#welcome-section {
+    background-image: linear-gradient(to bottom left,#181719, #3a3d40);
+    width:100%;
+    height: 100vh;
+
+}
+
+#projects {
+    width:100%;
+    height:100vh;
+    background-color: var(--main-blue);
+    padding: 60px 0;
+}
+#project-intro {
+    font-size: 20px;
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.underline {
+    background-color: white;
+    width: 520px;
+    height: 3px;
+    
+}
+#project-intro h1 {
+    margin:0;
+}
+
+#project-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 30rem;
+  padding: 20px 10px;
+}
+
+.project-tile img {
+  width: 100%;
+  max-width: 450px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+
+}
+
+.project-tile p {
+    text-align: center;
+    background-color:var(--main-gray);
+    padding: 10px 20px;
+    margin: 0;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.project-tile .tile-hover-initial {
+    font-weight:bold;
+    color: var(--main-gray);
+    transition: color 0.3s ease;
+}
+
+.project-tile:hover .tile-hover-initial{
+    color: var(--main-red);
+}
+
+#inspire {
+    width: 100%;
+    height:50vh;
+    background-color: var(--main-gray);
+}
+#contact {
+    width: 100%;
+    height: 45vh;
+    background-color: var(--main-gray);
+    border-top: solid var(--main-red) 5px;
+    gap: 70px;
+}
+#contact a {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+#contact a:hover {
+    transform: translateY(10px);
+}
